@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         val itemList: ArrayList<HourlyData> = ArrayList()
-        itemList.add(HourlyData("9 AM", 22, "snow"))
-        itemList.add(HourlyData("10 AM", 25, "cloudy_sunny"))
-        itemList.add(HourlyData("11 AM", 28, "sunny"))
-        itemList.add(HourlyData("12 PM", 27, "cloudy_sunny"))
-        itemList.add(HourlyData("1 PM", 24, "thunder"))
-        itemList.add(HourlyData("2 PM", 32, "cloudy_sunny"))
+        itemList.add(HourlyData("Now", 18, "snow"))
+        itemList.add(HourlyData("15:00", 17, "cloudy_sunny"))
+        itemList.add(HourlyData("16:00", 17, "sunny"))
+        itemList.add(HourlyData("17:00", 16, "cloudy_sunny"))
+        itemList.add(HourlyData("17:33", 15, "thunder"))
+        itemList.add(HourlyData("18:00", 18, "cloudy_sunny"))
 
         initRecyclerView(itemList)
     }
