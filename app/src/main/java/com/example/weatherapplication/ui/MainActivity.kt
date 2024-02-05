@@ -3,9 +3,12 @@ package com.example.weatherapplication.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.Window
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.weatherapplication.R
 import com.example.weatherapplication.adapter.FutureAdapter
 import com.example.weatherapplication.adapter.HourlyAdapter
 import com.example.weatherapplication.adapter.WeatherAdapter
@@ -16,7 +19,6 @@ import com.example.weatherapplication.model.WeatherData
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
@@ -50,6 +52,12 @@ class MainActivity : AppCompatActivity() {
         weatherList.add(WeatherData("air", "Air pressure", "1017","hPa"))
         initWeatherRecyclerView(weatherList)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
     private fun initHourlyRecyclerView(list: List<HourlyData>){
         val mLayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.hourlyRecycler.apply {
@@ -64,7 +72,6 @@ class MainActivity : AppCompatActivity() {
             adapter = FutureAdapter(list, this@MainActivity)
         }
     }
-
     private fun initWeatherRecyclerView(list: List<WeatherData>){
         val mLayoutManager = GridLayoutManager(this, 2)
         binding.weatherRecycler.apply {
