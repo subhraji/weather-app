@@ -53,8 +53,7 @@
         android:textSize="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_3sdp"
         app:layout_constraintEnd_toStartOf="@+id/low_temp_tv"
-        app:layout_constraintTop_toTopOf="@+id/day_tv"
-        />
+        app:layout_constraintTop_toTopOf="@+id/day_tv"/>
     <TextView
         android:id="@+id/high_temp_tv"
         android:layout_width="wrap_content"

@@ -6,10 +6,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.weatherapplication.R
 import com.example.weatherapplication.databinding.HourlyItemLayoutBinding
 import com.example.weatherapplication.model.HourlyData
-import com.example.weatherapplication.ui.FutureActivity
 
 class HourlyAdapter(private val itemList: List<HourlyData>, private val context: Context):
     RecyclerView.Adapter<HourlyAdapter.ViewHolder>() {
@@ -42,10 +40,6 @@ class HourlyAdapter(private val itemList: List<HourlyData>, private val context:
                 Glide.with(context)
                     .load(drawableResourceId)
                     .into(imageView)
-                root.setOnClickListener {
-                    val intent = Intent(context, FutureActivity::class.java)
-                    context.startActivity(intent)
-                }
             }
         }
     }
