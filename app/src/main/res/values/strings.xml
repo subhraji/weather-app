@@ -3,4 +3,6 @@
     <string name="mostly_cloudy">Mostly Cloudy</string>
     <string name="slash">/</string>
     <string name="fifteen_days_weather_forecast">15-day weather forecast</string>
+    <string name="weather_details">Weather Details</string>
+
 </resources>

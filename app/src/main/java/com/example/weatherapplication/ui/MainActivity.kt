@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val itemList: ArrayList<HourlyData> = ArrayList()
-        itemList.add(HourlyData("9 AM", 22, "cloudy"))
-        itemList.add(HourlyData("10 AM", 25, "fog"))
-        itemList.add(HourlyData("11 AM", 28, "sunny"))
-        itemList.add(HourlyData("12 PM", 27, "cloudy_sunny"))
-        itemList.add(HourlyData("1 PM", 24, "thunder"))
-        itemList.add(HourlyData("2 PM", 32, "cloudy_sunny"))
+        itemList.add(HourlyData("Now", 22, "cloudy"))
+        itemList.add(HourlyData("15:00", 25, "fog"))
+        itemList.add(HourlyData("16:00", 28, "sunny"))
+        itemList.add(HourlyData("17:00", 27, "thunder"))
+        itemList.add(HourlyData("17:33", 24, "cloudy_sunny"))
+        itemList.add(HourlyData("18:00", 32, "cloudy_sunny"))
         initHourlyRecyclerView(itemList)
 
         val dataList: ArrayList<FutureData> = ArrayList()
